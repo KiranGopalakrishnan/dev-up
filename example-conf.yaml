@@ -1,0 +1,21 @@
+profile: dev-environment-setup
+execute:
+    - program: tempoc
+    - command: get config
+lifecycle:
+  - install:
+      app: python
+      version: 13.6.5
+      env:
+        - name: something1
+          value: value of something
+        - name: something2
+          value: something2-value
+  - install:
+      app: node
+      version: 13.6.5
+      env:
+        - name: something1
+          value: value of something
+        - name: something2
+          value: something2-value
